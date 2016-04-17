@@ -1,0 +1,9 @@
+---
+  - name: set up a iiif-compliant image server
+    hosts: stage
+    user: ubuntu  # Vagrantfile overrides for vagrant
+    roles:
+      - system
+      - iip
+      - supervisor
+      - nginx
