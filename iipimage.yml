@@ -1,5 +1,5 @@
 ---
-  - name: set up a iiif-compliant image server
+  - name: set up an iipimage instance
     hosts: stage
     user: ubuntu  # Vagrantfile overrides for vagrant
     roles:
