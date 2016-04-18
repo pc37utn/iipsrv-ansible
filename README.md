@@ -4,7 +4,7 @@ Set up an instance of [IIPImage](http://iipimage.sourceforge.net/) to serve
 images according to the [IIIF standard](http://iiif.io/).
 
 0. install [Ansible] and [Git]
-1. `git clone https://github.com/umd_mith/iipimage-ansible.git`
+1. `git clone https://github.com/umd-mith/iipimage-ansible.git`
 2. `cd iipimage-ansible`
 2. edit `hosts` to point at your server: e.g. `images.example.org`
 3. `ansible-playbook iipimage.yml`
