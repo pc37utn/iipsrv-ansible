@@ -11,7 +11,7 @@ server {
 
     rewrite ^/iiif-image/([^/]+)$ /fcgi-bin/iipserver.fcgi?IIIF=$1 last;
     rewrite ^/iiif-image/([^/]+(?=/))((/[^/]+)*)$ /fcgi-bin/iipserver.fcgi?IIIF=$1$2 last;
-    rewrite ^/iiif-presentation/([^/]+)/manifest$ /manifests/$1-manifest.json last;
+    rewrite ^/iiif-presentation/([^/]+)/manifest$ /{{ iiif_manifests_dir }}/$1-manifest.json last;
 
 
     location /fcgi-bin/iipserver.fcgi {

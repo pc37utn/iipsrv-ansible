@@ -1,2 +1,5 @@
 ---
-  iip_server_name: iiif.example.org
+iip_server_name: "{{ inventory_hostname }}"
+iip_image_dir: "/data"
+iiif_manifests_dir: "/var/www/iiif/manifests"
+  
