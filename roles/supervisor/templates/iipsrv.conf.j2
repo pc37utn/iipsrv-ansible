@@ -1,8 +1,8 @@
 [fcgi-program:iipserver]
-environment=LOGFILE='/var/log/iipsrv/iipsrv.log',VERBOSITY='4',FILESYSTEM_PREFIX='/data/',CORS='*',BASE_URL='http://{{ iip_server_name }}/iiif-image/'
+environment=LOGFILE='/var/log/iipsrv/iipsrv.log',VERBOSITY='4',FILESYSTEM_PREFIX='/usr/share/nginx/iipsrv/images/',CORS='*',BASE_URL='http://{{ iip_server_name }}/iiif-image/'
 command=/usr/lib/iipsrv/src/iipsrv.fcgi
 socket=unix:///var/run/iipserver.sock
-user=iipsrv
+user=nginx
 autostart=true
 autorestart=unexpected
 redirect_stderr=true

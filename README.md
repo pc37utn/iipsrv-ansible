@@ -7,6 +7,7 @@ images according to the [IIIF standard](http://iiif.io/).
 1. `git clone https://github.com/umd-mith/iipsrv-ansible.git`
 2. `cd iipsrv-ansible`
 2. edit `hosts` to point at your server: e.g. `images.example.org`
+3. edit `iip_server_name` in `group_vars/all/config.yml` to be the same: e.g. `images.example.org`
 3. `ansible-playbook iipsrv.yml`
 4. put a pyramidal tiff image in `data`: e.g. `test.tif`
 5. `ansible-playbook sync.yml`
