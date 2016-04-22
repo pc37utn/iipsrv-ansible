@@ -1,9 +1,9 @@
 ---
-  - name: set up an iipimage instance
-    hosts: stage
+  - name: set up an iipsrv instance
+    hosts: iipsrv-vagrant
     user: ubuntu  # Vagrantfile overrides for vagrant
     roles:
       - system
-      - iip
+      - iipsrv
       - supervisor
       - nginx

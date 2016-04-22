@@ -12,20 +12,22 @@
     notify: restart nginx
 
   - name: copy server confs
-    template: src=iipsrv.j2 dest=/etc/nginx/sites-available/iipsrv
+    template: src=iipsrv.j2 dest=/etc/nginx/nginx.conf
     sudo: yes
     notify: restart nginx
 
-  - name: symlink server confs
-    file: src=/etc/nginx/sites-available/iipsrv dest=/etc/nginx/sites-enabled/iipsrv state=link
+  - name: make sure iipsrv dir exists
+    file: path=/usr/share/nginx/iipsrv state=directory
     sudo: yes
-    notify: restart nginx
-
-  - name: delete default nginx server conf
-    file: path=/etc/nginx/sites-enabled/default state=absent
-    sudo: yes
-    notify: restart nginx
 
   - name: make sure manifests dir exists
-    file: path={{ iiif_manifests_dir }} state=directory
+    file: path=/usr/share/nginx/iipsrv/manifests state=directory
+    sudo: yes
+
+  - name: make sure images dir exists
+    file: path=/usr/share/nginx/iipsrv/images state=directory
+    sudo: yes
+
+  - name: copy index.html
+    template: src=index.j2 dest=/usr/share/nginx/iipsrv/index.html
     sudo: yes
