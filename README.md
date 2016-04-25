@@ -14,7 +14,7 @@ Set up an instance of [IIP Image Server (iipsrv)](http://iipimage.sourceforge.ne
 
 If you'd prefer to test things locally with [Vagrant] you should be able to simply:
 
-0. vagrant up
+0. `vagrant up`
 1. go to http://192.168.33.12/
 
 [Ansible]: https://www.ansible.com/
