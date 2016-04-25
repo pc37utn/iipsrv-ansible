@@ -12,5 +12,11 @@ Set up an instance of [IIP Image Server (iipsrv)](http://iipimage.sourceforge.ne
 5. `ansible-playbook sync.yml`
 6. go to http://images.example.org/iiif-image/test.tif
 
+If you'd prefer to test thing locally with [Vagrant] you should be able to simply:
+
+0. vagrant up
+1. go to http://192.168.33.12/
+
 [Ansible]: https://www.ansible.com/
 [Git]: https://github.com/trevormunoz/automation/tree/master/iiif-server
+[Vagrant]: https://www.vagrantup.com/ 
