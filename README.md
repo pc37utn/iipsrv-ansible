@@ -1,7 +1,6 @@
 # iipsrv-ansible
 
-Set up an instance of [IIPImage](http://iipimage.sourceforge.net/) to serve
-images according to the [IIIF standard](http://iiif.io/).
+Set up an instance of [IIPImage Server (iipsrv)](http://iipimage.sourceforge.net/) to serve images and their metadata using [IIIF](http://iiif.io/).
 
 0. install [Ansible] and [Git]
 1. `git clone https://github.com/umd-mith/iipsrv-ansible.git`
